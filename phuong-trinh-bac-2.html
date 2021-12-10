@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a;
+    let b;
+    let c;
+
+    //hàm prompt hiển thị form nhập liệu
+    a = prompt('nhập a');
+    b = prompt('nhập b');
+    c = prompt('nhập c');
+
+    //
+    a = parseInt(a);
+    b = parseInt(b);
+    c = parseInt(c);
+
+    if (a == 0) {
+        document.write('là phương trình bậc nhất');
+    } else if (a > 0) {
+        let d = ((b * b) - (4 * a * c))
+
+        // pt có nghiệm kép a=2, b=4, c=5
+        d = parseInt(d);
+        alert('delta= ' + d)
+        if (d > 0) {
+            document.write('phương trình có 2 nghiệm phân biệt x1 = ' + (-b + Math.sqrt(d)) / (2 * a))
+            document.write('<br>')
+            document.write('phương trình có 2 nghiệm phân biệt x2 = ' + (-b - Math.sqrt(d)) / (2 * a))
+
+        } else if (d == 0) {
+            document.write('phương trình có nghiệm kép x1 = x2 = ' + -b / 2 * a)
+        } else if (d < 0) {
+            document.write('phương trình vô nghiệm')
+        }
+    }
+
+
+</script>
+</body>
+</html>
